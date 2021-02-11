@@ -1,14 +1,14 @@
 helpFunction()
 {
    echo ""
-   echo "Usage: $0 -s [0/1]"
+   echo "Usage: $0 [-s <0|1>] [-d <0|1>]"
    echo -e "\t-s Enter 0 to disable SSL else enter 1(default:1)"
    echo -e "\t-d Enter 1 to create DB else enter 0(default:0)"
    exit 1 # Exit script after printing help
 }
 ssl_enabled=1
 create_db=0
-while getopts "s:d:" opt
+while getopts "d:s:h" opt
 do
    case "$opt" in
       s ) ssl_enabled="$OPTARG" ;;
