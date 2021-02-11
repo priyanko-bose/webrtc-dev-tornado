@@ -215,18 +215,13 @@ jQuery(document).ready(function($){
         });
 	//---Room id display modal----
 	var modal = document.getElementById("roomModal");
-	var isHost = $("#ishost").val();
 	// Get the <span> element that closes the modal
 	var span = document.getElementById("roomModalClose");
 	// When the user clicks on <span> (x), close the modal
 	span.onclick = function() {
   		modal.style.display = "none";
 	}
-	if(isHost)
- 	    modal.style.display = "block";
-        else
-	    modal.style.display = "none";
-	alert(isHost);
+ 	modal.style.display = "block";
 	// When the user clicks anywhere outside of the modal, close it
 	window.onclick = function(event) {
   	   if (event.target == modal) {
