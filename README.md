@@ -40,4 +40,4 @@ You can create your own by using the follwoing command. <br />
 #openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout key.pem -out certificate.pem <br />
 8. use start-server.sh to run the server and get the Server URL in the screen. <br />
 9. use stop-server.sh and restart-server.sh to stop and restart the server respectively. <br />
-10. log can be seen in sig-server.log file. <br />
+10. log can be seen in sig-server.log file.
