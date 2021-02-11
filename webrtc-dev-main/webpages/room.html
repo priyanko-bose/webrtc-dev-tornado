@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CollageIn</title>
+
+	<!-- Please follow the order of css includes -->
+	<link href="{{ static_url('css/reset.css') }}" rel="stylesheet"> <!-- CSS reset -->
+	<link rel="stylesheet" type="text/css" href="{{ static_url('bootstrap-3.3.7/css/bootstrap.min.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ static_url('fonts/fonts-style.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ static_url('css/collagein/home-style.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ static_url('css/collagein/room-style.css') }}" />
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
+	<script type="text/javascript" src="{{ static_url('js/jquery/jquery.min.js') }}"></script>
+	<script type="text/javascript" src="{{ static_url('js/jquery/jquery.js') }}"></script>
+	<script type="text/javascript" src="{{ static_url('js/jquery/jquery.transit.min.js') }}"></script>
+        <script type="text/javascript" src="{{ static_url('js/jquery/jquery-ui.js') }}"></script>
+        <script type="text/javascript" src="{{ static_url('bootstrap-3.3.7/js/bootstrap.min.js') }}"></script>
+
+	<script type="text/javascript" src="{{ static_url('js/collagein/ci-utilities.js') }}"></script>
+        <script type="text/javascript" src="{{ static_url('js/collagein/ci-client.js') }}"></script>
+	<script type="text/javascript" src="{{ static_url('js/collagein/ci-peerClient.js') }}"></script>
+        <script type="text/javascript" src="{{ static_url('js/collagein/ci-peerConnection.js') }}"></script>
+	<script type="text/javascript" src="{{ static_url('js/collagein/ci-sigServerConn.js') }}"></script>
+	<script type="text/javascript" src="{{ static_url('js/collagein/ci-home.js') }}"></script>
+	<script type="text/javascript" src="{{ static_url('js/collagein/ci-room.js') }}"></script>
+
+	<style>
+        </style>
+        <script>
+            $( function() {
+            
+            });
+        </script>
+</head>
+<body>
+    <header class="main-header">
+	    <div class=col-md-2">	   
+		<a id="logo-container" href="#0" style="padding-left: 25px;">
+			<img src="{{ static_url('img/ci-logo48.png')}}" alt="Homepage">
+			<span id="header-text">CollageIn</span>
+		</a>
+            </div>
+            <div id="top-right-menu" href="#0" alt="Menu">
+		<div class="top-right-menu-icon"></div>
+		<div class="top-right-menu-text">{{username}}</div>
+                <input type="hidden" name="username" id="username" value={{ username }} />
+		<input type="hidden" name="userid" id="userid" value={{ userid }} />
+		<input type="hidden" name="roomid" id="roomid" value={{ roomid }} />
+		<input type="hidden" name="ishost" id="ishost" value={{ ishost }} />
+		<input type="hidden" name="wsPath" id="wsPath" value={{ ws_path }} />
+	   </div>
+    </header>
+    <main class="main-content">
+      <div class="row">
+        <div class="col-md-8">
+	    <span><h3 id="roomname-header">{{ roomname }}</h3></span>
+	    <span><p id="participant-header">{{ participants }}</p></span> 
+	    <input type="hidden" name="participantsId" id="participantsId" value={{ participantsId }} />
+        </div>
+	<div class="col-md-4">
+	    <span class="errortext" id="errorMessageRoom"></span>
+        </div>
+     </div>
+     <!-- The Modal -->
+    <div id="roomModal" class="modal">
+	<!-- Modal content -->
+  	<div class="modal-content">
+    	    <div class="modal-header">
+      	        <span id="roomModalClose" class="close">&times;</span>
+                <h4>Room Details</h4>
+    	    </div>
+            <div class="modal-body">
+                <p>Use the roomid to join others in this room: <b>{{ roomid }}</b></p>
+    	    </div>
+	</div>
+    </div>
+     <!-- Video area form -->
+	<div class="row" style="height: inherit;">
+	    <div class="col-sm-8" style="background-color:lavender; height: inherit;">
+                 <div id="localVideoArea" class='video-area'>
+                     <div id="locVideoSrcUserId" class="hide-me"></div>
+                     <div class="vSrcUserNameClass" id="locVideoSrcUserName"></div>
+                     <video class="videoClass" autoplay id="locVideoSrc"></video>
+		     <i class="fa fa-microphone" id="micIcon"></i>
+		     <i class="fas fa-video" id="vidIcon"></i>
+                     </div>
+                 <div id="remoteVideoArea" class='video-area'>
+                     <div id="remVideoSrcUserId" class="hide-me"></div>
+                     <div class="vSrcUserNameClass" id="remVideoSrcUserName"></div>
+        	     <video class="videoClass" autoplay id="remVideoSrc"></video>
+                 </div>
+	    </div>
+    	    <div class="col-sm-4" style="background-color:lavenderblush; height: inherit;">
+		<div class="chat-panel">
+		    <header class="chat-panel-header"></header>
+		    <div class="typed-message-section"></div>
+		    <div class="type-message-section" action="" method="">
+		    	<textarea  id="type-input" type="text"></textarea >
+		        <button class="button button-block" id="send-input" type="button">Send</button >
+		    </div>
+	            <footer class="chat-panel-footer">
+		        <span id="typing-info">someone is typing...</span>
+		    </footer>
+		</div>
+            </div>
+	</div>
+	
+    </main>
+</body>
+</html>

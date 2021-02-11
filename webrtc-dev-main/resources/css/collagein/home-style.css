@@ -1,0 +1,360 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  /* you need to set this to assign to the main element a min height of 100% */
+  height: 100%;
+  min-height: 200px;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  color: black;
+  overflow: scroll;
+  background: rgb(111,134,214); /* Old browsers */ /*#6f86d6*/
+  background: -moz-linear-gradient(top, rgba(111,134,214,1) 0%, rgba(121,229,159,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(111,134,214,1) 0%,rgba(121,229,159,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(111,134,214,1) 0%,rgba(121,229,159,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6f86d6', endColorstr='#79e59f',GradientType=0 ); /* IE6-9 */
+}
+
+div.row{
+  margin-right:0px;
+}
+a {
+  color: #6cac70;
+  text-decoration: none;
+}
+
+/*----------Header --------*/
+.main-header {
+  /*position: absolute;*/
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background: #3a4773 ;
+  z-index: 3;
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+#username-header{
+  float: right;
+  margin-right: 150px;
+}
+/*----------------------------------
+top right menu area
+------------------------------------*/
+#top-right-menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 200px;
+  background-color: #354169;
+  padding-left:9px;
+}
+
+.top-right-menu-text {
+  height: 100%;
+  color: #FFF;
+  font-weight: 300;
+  line-height: 50px;
+  font-size: 14px;
+  float:left;
+  margin-left: 20px;
+}
+
+.top-right-menu-icon {
+  /* this span is the central line in the menu menu */
+  display: inline-block;
+  background-image: url("../../img/account32.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 32px;
+  height: 100%;
+  float:left;
+  /* these are the upper and lower lines in the menu menu */
+}
+/* --------------------------------
+
+Main components 
+
+-------------------------------- */
+.main-content {
+  /* set a min-height and a z-index to be sure that the main element completely covers the lateral menu */
+  height: calc(100% - 35px);
+  position: relative;
+  background: transparent;
+  z-index: 2;
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+/*----------------------------------
+Logo area
+------------------------------------*/
+#logo-container {
+  display: block;
+  float: left;
+}
+#header-text {
+   color : #58ffc3;
+}
+#logo-container img {
+  display: block;
+  position:absolute;
+}
+#header-text{
+  /*position: absolute;*/
+  font-size: xx-large;
+  margin-left: 50px;
+  float: left;
+}
+/*-------------------
+Error Text
+-------------------*/
+.errortext{
+  float: right;
+  color: darkred;
+  font-size: x-small;
+  font-weight: 700;
+  margin: 20px;
+}
+/* -------------------------------- 
+
+Common styles parts of our design
+
+-------------------------------- */
+.button-block {
+    display: block;
+    width: 100px;
+}
+.button {
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Harmattan', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    background: #d96459;
+    color: #ffffff;
+    /*transition: all.5s ease;*/
+    -webkit-appearance: none;
+}
+
+.button.disabled{
+    background: #ce8680;
+} 
+input, textarea {
+    font-family: 'Quicksand', sans-serif;
+    font-style: italic;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    padding-bottom: 2px;
+    background-image: none;
+    border: 0;
+    outline: 0;
+    border: 1px solid;
+    border-color: #92bce0;
+    color: #384971;
+    /*transition: border-color .25s ease, box-shadow .25s ease;*/
+    font-weight:600;
+}
+
+.img-replace {
+  /* replace text with a background-image */
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+ }
+.hide-me{
+    display:none;
+}
+
+.user-icon{
+  width: 36px;
+  height: 36px;
+  color: #00dddd;
+  text-align: center;
+  background: url("../../img/person.png") no-repeat center center;
+  opacity: .8;
+  z-index: 1;
+  float:left
+}
+.contact-form{
+ margin: 6em 0;
+ position: relative;  
+}
+
+.contact-form h1{
+ padding:2em 1px;
+ color: #F97300; 
+}
+.contact-form .right{
+ max-width: 600px;
+}
+.contact-form .right .btn-secondary{
+ background:  #133457;
+ color: #fff;
+ border:0;
+}
+.contact-form .right .form-control::placeholder{
+ color: #888;
+ font-size: 16px;
+}
+.form-area {
+ background-color: #a3a1bb;
+ height: 200px;
+ border-radius: 10px;
+}
+
+/* -------------------------------- 
+
+video-area styles 
+
+-------------------------------- */
+
+#videoArea1{
+  width: 400px; 
+  height: 300px; 
+  float: left; 
+}
+#videoArea2{
+  width: 400px; 
+  height: 300px; 
+  float: right; 
+}
+
+.video-area {
+  width: 50%;
+  margin: 10px;
+}
+
+.videoClass{
+    height: 100%;
+    width: 100%;
+
+}
+
+/* -------------------------------- 
+
+chat-panel styles 
+
+-------------------------------- */
+.chat-panel.chat-is-visible.video-is-visible{
+  /*height: 200px;*/
+}
+
+.chat-panel.chat-is-visible{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255,255,255,.8);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  display:block;
+  -webkit-animation: slide-up .3s ease;
+  -moz-animation: slide-up .3s ease;
+}
+
+.chat-panel{
+    width: 100%;
+    z-index: 2;
+    display:none;
+}
+
+.chat-panel-header{
+  width:100%;
+  height:20px;
+  font-size: 12px;
+  line-height: 12px;
+  align-items: right;
+}
+.chat-panel-header a{
+  float:right;
+  margin:5px;
+}
+.chat-panel-footer{
+  width:100%;
+  height:15px;
+  font-size: 10px;
+  line-height: 10px;
+  position: relative;
+  margin-top: 2px;
+  padding-left:15px;
+  padding-right:15px;
+}
+.one-typed-line{
+  line-height: 18px;
+  font-size: 12px;
+  margin-left:9px;
+}
+
+.typed-message-section {
+  width: 100%;
+  height: calc(100% - 90px);
+  overflow-y: auto;
+  position: relative;
+  padding-left:15px;
+  padding-right:15px;
+}
+.type-message-section{
+  padding-left:15px;
+  padding-right:15px;
+  height:50px;
+  width: 100%;
+  position: relative;
+  margin-top: 5px;
+}
+
+#type-input{
+  float:left;
+  min-height: 30px;
+  max-height: 50px;
+  height:50px;
+  width: calc(100% - 50px);
+  resize: vertical;
+}
+#send-input{
+  width: 45px;
+  height:50px;
+  float:left;
+  margin-left: 5px;
+}

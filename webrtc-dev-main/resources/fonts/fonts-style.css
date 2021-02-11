@@ -1,0 +1,83 @@
+/* francois-one-regular - latin ---for error message and notifications*/
+@font-face {
+  font-family: 'Francois One';
+  font-style: normal;
+  font-weight: 400;
+  src: url('francois-one-v11-latin/francois-one-v11-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Francois One Regular'), local('FrancoisOne-Regular'),
+       url('francois-one-v11-latin/francois-one-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('francois-one-v11-latin/francois-one-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('francois-one-v11-latin/francois-one-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('francois-one-v11-latin/francois-one-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('francois-one-v11-latin/francois-one-v11-latin-regular.svg#FrancoisOne') format('svg'); /* Legacy iOS */
+}
+
+/* simonetta-regular - latin for labels or placeholder text*/ 
+@font-face {
+  font-family: 'Simonetta';
+  font-style: normal;
+  font-weight: 400;
+  src: url('simonetta-v7-latin/simonetta-v7-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Simonetta Regular'), local('Simonetta-Regular'),
+       url('simonetta-v7-latin/simonetta-v7-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('simonetta-v7-latin/simonetta-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('simonetta-v7-latin/simonetta-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('simonetta-v7-latin/simonetta-v7-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('simonetta-v7-latin/simonetta-v7-latin-regular.svg#Simonetta') format('svg'); /* Legacy iOS */
+}
+
+/* harmattan-regular - latin   --- for button text*/
+@font-face {
+  font-family: 'Harmattan';
+  font-style: normal;
+  font-weight: 400;
+  src: url('harmattan-v3-latin/harmattan-v3-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Harmattan'), local('Harmattan-Regular'),
+       url('harmattan-v3-latin/harmattan-v3-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('harmattan-v3-latin/harmattan-v3-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('harmattan-v3-latin/harmattan-v3-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('harmattan-v3-latin/harmattan-v3-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('harmattan-v3-latin/harmattan-v3-latin-regular.svg#Harmattan') format('svg'); /* Legacy iOS */
+}
+
+/* acme-regular - latin */
+@font-face {
+  font-family: 'Acme';
+  font-style: normal;
+  font-weight: 400;
+  src: url('acme-v7-latin/acme-v7-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Acme Regular'), local('Acme-Regular'),
+       url('acme-v7-latin/acme-v7-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('acme-v7-latin/acme-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('acme-v7-latin/acme-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('acme-v7-latin/acme-v7-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('acme-v7-latin/acme-v7-latin-regular.svg#Acme') format('svg'); /* Legacy iOS */
+}
+
+/* quicksand-regular - latin */
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: url('quicksand-v7-latin/quicksand-v7-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Quicksand Regular'), local('Quicksand-Regular'),
+       url('quicksand-v7-latin/quicksand-v7-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('quicksand-v7-latin/quicksand-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('quicksand-v7-latin/quicksand-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('quicksand-v7-latin/quicksand-v7-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('quicksand-v7-latin/quicksand-v7-latin-regular.svg#Quicksand') format('svg'); /* Legacy iOS */
+}
+
+/* raleway-regular - latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: url('raleway-v12-latin/raleway-v12-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Raleway'), local('Raleway-Regular'),
+       url('raleway-v12-latin/raleway-v12-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('raleway-v12-latin/raleway-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('raleway-v12-latin/raleway-v12-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('raleway-v12-latin/raleway-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('raleway-v12-latin/raleway-v12-latin-regular.svg#Raleway') format('svg'); /* Legacy iOS */
+}

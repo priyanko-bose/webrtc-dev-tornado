@@ -1,0 +1,285 @@
+html {
+	 overflow-y: auto; 
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin:0px;
+    overflow: scroll;
+
+}
+
+label {
+    float:left;
+    position : relative;
+    left:5px;
+    transition:all 0.25s ease;
+    -webkit-backface-visibility: hidden;
+    pointer-events: none;
+    font-family: 'Simonetta', sans-serif;
+    font-size:20px;
+    bottom: -20px;
+    height:20px;
+    color:#a5a5a5;
+
+}
+
+label .req {
+    margin:2px;
+    color: #ea6559;
+}
+
+label.active {
+    transform:translateY(-15px);
+    font-size:14px;
+    color: #92bce0;
+}
+label.active .req {
+    opacity:0;
+}
+
+label.highlight {
+  	color: #afdaff;
+  	filter: brightness(120%);
+}
+
+
+input, textarea {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size:15px;
+    display:block;
+    width:100%;
+    height:100%;
+    padding-bottom: 2px;
+    background-image:none;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid;
+    border-color: #92bce0;
+    background: transparent;
+    transition:border-color .25s ease, box-shadow .25s ease;
+}
+
+input:focus{
+  	outline:0;
+  	border-bottom: 1px solid;
+  	border-color: #afdaff;
+  	filter: brightness(120%);
+}
+
+textarea {
+    border:2px solid;
+    resize: vertical;
+}
+
+.field-wrap {
+    margin-bottom:15px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+#roomname-header{
+  margin-left: 20px;
+}
+#participant-header{
+  margin-left: 20px;
+}
+/* -------------------------------- 
+
+video-area styles 
+
+-------------------------------- */
+
+#localVideoArea{
+  width: 400px; 
+  height: 300px; 
+  float: left; 
+}
+#remoteVideoArea{
+  width: 400px; 
+  height: 300px; 
+  float: right; 
+}
+
+.video-area {
+  width: 50%;
+  margin: 10px;
+}
+
+.videoClass{
+    height: 100%;
+    width: 100%;
+    box-shadow: 1px 1px 5px rgb(0 0 0 / 40%);
+    border-radius: 5px;
+}
+.vSrcUserNameClass{
+    display: flex;
+    padding-left:5px;
+    color: chartreuse;
+    background: rgba(0,0,0,0);
+    position: absolute;
+    height: 50px;
+    width: inherit;
+    border: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.vSrcUserNameClass : hover{
+    color: chartreuse;
+    background-color: slategray;
+   visibility: visible;
+   -webkit-transition: all 0.3s;
+   -moz-transition: all 0.3s;
+   transition: all 0.3s;
+}
+
+/* -------------------------------- 
+
+chat-panel styles 
+
+-------------------------------- */
+.chat-panel{
+  height: calc(100% - 50px);
+  width: calc(100% - 20px);
+  background-color: rgba(255,255,255,.8);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  display:block;
+  -webkit-animation: slide-up .3s ease;
+  -moz-animation: slide-up .3s ease;
+  margin: 10px;
+}
+
+.chat-panel-header{
+  width:100%;
+  height:20px;
+  font-size: 12px;
+  line-height: 12px;
+  align-items: right;
+}
+.chat-panel-header a{
+  float:right;
+  margin:5px;
+}
+.chat-panel-footer{
+  width:100%;
+  height:15px;
+  font-size: 10px;
+  line-height: 10px;
+  position: relative;
+  margin-top: 2px;
+  padding-left:15px;
+  padding-right:15px;
+}
+.one-typed-line{
+  line-height: 18px;
+  font-size: 12px;
+  margin-left:9px;
+}
+
+.typed-message-section {
+  width: 100%;
+  height: calc(100% - 90px);
+  overflow-y: auto;
+  position: relative;
+  padding-left:15px;
+  padding-right:15px;
+}
+.type-message-section{
+  padding-left:15px;
+  padding-right:15px;
+  height:50px;
+  width: 100%;
+  position: relative;
+  margin-top: 5px;
+}
+
+#type-input{
+  float:left;
+  min-height: 30px;
+  max-height: 50px;
+  height:50px;
+  width: calc(100% - 50px);
+  resize: vertical;
+}
+#send-input{
+  width: 45px;
+  height:50px;
+  float:left;
+  margin-left: 5px;
+}
+
+#vidIcon {
+    border-radius: 20px;
+    background: darkgrey;
+    height: 40px;
+    width: 40px;
+    padding-top: 8px;
+    font-size: x-large;
+    top: -55px;
+    margin: 5px;
+    position: relative;
+}
+#vidIcon.fa-video{
+    padding-left: 8px;
+}
+#vidIcon.fa-video-slash{
+    padding-left: 6.5px;
+}
+#micIcon{
+    border-radius: 20px;
+    background: darkgrey;
+    height: 40px;
+    width: 40px;
+    padding-top: 8px;
+    font-size: x-large;
+    top: -55px;
+    margin: 5px;
+    position: relative;
+}
+#micIcon.fa-microphone{
+    padding-left: 11px;
+}
+#micIcon.fa-microphone-slash{
+    padding-left: 4.2px;
+}
+
+/* Modal Header */
+.modal-header {
+  padding: 2px 16px;
+  background-color: #323d61;
+  color: white;
+}
+
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 30%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}

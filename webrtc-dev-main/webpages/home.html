@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CollageIn</title>
+
+	<!-- Please follow the order of css includes -->
+	<link href="{{ static_url('css/reset.css') }}" rel="stylesheet"> <!-- CSS reset -->
+	<link rel="stylesheet" type="text/css" href="{{ static_url('bootstrap-3.3.7/css/bootstrap.min.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ static_url('fonts/fonts-style.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ static_url('css/collagein/home-style.css') }}" />
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+       
+
+	<script type="text/javascript" src="{{ static_url('js/jquery/jquery.min.js') }}"></script>
+	<script type="text/javascript" src="{{ static_url('js/jquery/jquery.js') }}"></script>
+	<script type="text/javascript" src="{{ static_url('js/jquery/jquery.transit.min.js') }}"></script>
+        <script type="text/javascript" src="{{ static_url('js/jquery/jquery-ui.js') }}"></script>
+        <script type="text/javascript" src="{{ static_url('bootstrap-3.3.7/js/bootstrap.min.js') }}"></script>
+	<style>
+        </style>
+        <script>
+            $( function() {
+            
+            });
+        </script>
+</head>
+<body>
+    <header class="main-header">
+	    <div class=col-md-2">	   
+		<a id="logo-container" href="#0" style="padding-left: 25px;">
+			<img src="{{ static_url('img/ci-logo48.png')}}" alt="Homepage">
+			<span id="header-text">CollageIn</span>
+		</a>
+            </div> 
+    </header>
+    <main class="main-content">
+	<div class="row">
+    	    <div class="col-md-12">
+	    	<span class="errortext" id="errorMessageHome"></span>
+            </div>
+      	</div>
+    <!-- Contact form -->
+	<div class="contact-form">
+ 	    <div class="container">
+   		<div class="row">
+     		    <div class="col-md-4">	   
+      		    	<form>
+       			  <div class="col-lg-12 col-md-12 col-sm-12 right form-area">
+          		    <h4>Start New Meeting</h1> 
+          		    <div class="form-group">
+             			<input type="text" id='user-name-create' style="margin-bottom: 5px;" class="form-control form-control-lg" placeholder="Your Name" name="">
+	     			<input type="text" id='room-name-create' class="form-control form-control-lg" placeholder="Room Name" name="">
+          		    </div>
+          		    <button type="button" id='create-button' class="btn btn-secondary btn-block">Create</button>
+       			  </div>
+      			</form>
+     		    </div>
+     		    <div class="col-md-1" align="center"><h3>Or</h3></div>
+     		    <div class="col-md-4">	   
+       			<form>
+       			  <div class="col-lg-12 col-md-12 col-sm-12 right form-area">
+          		    <h4>Join Meeting</h1>
+          		    <div class="form-group">
+            			<input type="text" id='user-name-join' style="margin-bottom: 5px;" class="form-control form-control-lg" placeholder="Your Name" name="">
+	    			<input type="text" id='room-url-join' class="form-control form-control-lg" placeholder="Room Id" name="room">
+          		    </div>
+          		    <button type="button" id='join-button' class="btn btn-secondary btn-block">Join</button>
+       			  </div>
+      		        </form>
+    		    </div>
+   		</div>
+ 	    </div>
+	</div>
+    </main>
+
+<script type="text/javascript" src="{{ static_url('js/collagein/ci-home.js') }}"></script>
+
+</body>
+</html>
