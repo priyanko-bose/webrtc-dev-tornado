@@ -28,8 +28,8 @@ class DBManager(object):
 
         self.flagConnOpen = False
         #Assign server and create DB connection
-        self.db_conn = pymysql.connect(self.db_server,self.db_user,
-                                        self.db_pass,self.db_name)
+        self.db_conn = pymysql.connect(host=self.db_server, user=self.db_user,
+                                        password=self.db_pass, db=self.db_name)
         if self.db_conn:
             self.flagConnOpen = True
         self.logger = Logger.getInstance()
